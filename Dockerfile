@@ -36,7 +36,7 @@ RUN curl -sSL -o /usr/local/bin/linkcheck https://github.com/docker/linkcheck/re
 WORKDIR /docs
 
 # default to validating the docs build
-CMD ["/docs/validate.sh"]
+CMD ["bash", "/docs/validate.sh"]
 COPY validate.sh /docs/
 RUN chmod 755 /docs/validate.sh
 
